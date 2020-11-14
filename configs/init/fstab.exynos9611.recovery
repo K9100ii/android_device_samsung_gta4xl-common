@@ -9,7 +9,7 @@ vendor							/vendor			ext4	ro,barrier=1													wait,logical,first_stage_mo
 product							/product		ext4	ro,errors=panic													wait,logical,first_stage_mount
 odm							/odm			ext4	ro,errors=panic													wait,logical,first_stage_mount
 
-/dev/block/platform/13520000.ufs/by-name/metadata	/metadata		ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,sync			wait,first_stage_mount,formattable,check,fsverity
+/dev/block/platform/13520000.ufs/by-name/metadata	/metadata		ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,data=journal,commit=1	wait,first_stage_mount,formattable,check,fsverity
 
 /dev/block/platform/13520000.ufs/by-name/boot		/boot			emmc	defaults													recoveryonly
 /dev/block/platform/13520000.ufs/by-name/recovery	/recovery		emmc	defaults													recoveryonly

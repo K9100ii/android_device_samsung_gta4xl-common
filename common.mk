@@ -19,6 +19,9 @@ COMMON_PATH := device/samsung/gta4xl-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/gta4xl-common/gta4xl-common-vendor.mk)
 
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 PRODUCT_CHARACTERISTICS := tablet
 
 # Audio

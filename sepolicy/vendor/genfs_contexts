@@ -7,6 +7,7 @@ genfscon proc /sys/vm/swappiness                                                
 genfscon sysfs /class/video4linux                                                                              u:object_r:sysfs_v4l:s0
 
 # Devices
+genfscon sysfs /devices/platform/battery/power_supply/battery/charging_enabled                                 u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/panel/panel_drv/backlight/panel/brightness                                    u:object_r:sysfs_backlight_writable:s0
 genfscon sysfs /devices/platform/panel/panel_drv/backlight/panel/max_brightness                                u:object_r:sysfs_backlight_writable:s0
 genfscon sysfs /devices/platform/11500000.mali/dma_buf_gpu_mem                                                 u:object_r:sysfs_gpu:s0

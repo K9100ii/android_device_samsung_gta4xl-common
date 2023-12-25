@@ -82,6 +82,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
     gralloc.exynos9611 \
+    libGrallocWrapper \
     libion
 
 # Dynamic Partitions

@@ -19,6 +19,9 @@ COMMON_PATH := device/samsung/gta4xl-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/gta4xl-common/gta4xl-common-vendor.mk)
 
+# Soong namespaces
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+
 PRODUCT_CHARACTERISTICS := tablet
 
 # Audio

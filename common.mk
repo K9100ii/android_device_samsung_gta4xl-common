@@ -16,11 +16,14 @@
 
 COMMON_PATH := device/samsung/gta4xl-common
 
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/gta4xl-common/gta4xl-common-vendor.mk)
 
-# Enable project quotas and casefolding for emulated storage without sdcardfs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+# Soong namespaces
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 
 PRODUCT_CHARACTERISTICS := tablet
 

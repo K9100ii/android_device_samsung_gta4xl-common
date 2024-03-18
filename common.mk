@@ -132,16 +132,6 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 400dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-PRODUCT_PACKAGES += \
-    libGLES_mali_libOpenCL_symlink \
-    libGLES_mali_libOpenCL.1_symlink \
-    libGLES_mali_libOpenCL.1.1_symlink \
-    libGLES_mali_vulkan_symlink \
-    libGLES_mali_libOpenCL_symlink32 \
-    libGLES_mali_libOpenCL.1_symlink32 \
-    libGLES_mali_libOpenCL.1.1_symlink32 \
-    libGLES_mali_vulkan_symlink32
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \

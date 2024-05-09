@@ -856,6 +856,10 @@ on fs
 #load ecd firmware
     write /proc/ecd/load_firmware 1
 
+on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /system/bin/watchdogd 10 20
      user root

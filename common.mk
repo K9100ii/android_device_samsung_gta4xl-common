@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudioroute \
     libtinyalsa \
-    libtinycompress
+    libtinycompress \
+    tinymix
 
 PRODUCT_PACKAGES += \
     SamsungDAP

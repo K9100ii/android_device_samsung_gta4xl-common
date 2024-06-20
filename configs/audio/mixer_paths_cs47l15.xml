@@ -1536,17 +1536,17 @@
 	</path>
 
 	<!-- Voice Recording paths -->
-	<path name="recording-mic">
-		<path name="media-mic" />
-	</path>
-
-	<path name="recording-2nd-mic">
-		<path name="media-2nd-mic" />
-	</path>
-
 	<path name="recording-dualmic">
 		<path name="route-ap-record" />
 		<path name="dev-dual-invert-mic" />
+	</path>
+
+	<path name="recording-mic">
+		<path name="recording-dualmic" />
+	</path>
+
+	<path name="recording-2nd-mic">
+		<path name="recording-dualmic" />
 	</path>
 
 	<path name="recording-headset-mic">
@@ -1587,16 +1587,16 @@
 	</path>
 
 	<!-- Camcording paths -->
+	<path name="camcorder-dualmic">
+		<path name="recording-dualmic" />
+	</path>
+
 	<path name="camcorder-mic">
-		<path name="media-mic" />
+		<path name="camcorder-dualmic" />
 	</path>
 
 	<path name="camcorder-2nd-mic">
-		<path name="media-2nd-mic" />
-	</path>
-
-	<path name="camcorder-dualmic">
-		<path name="recording-dualmic" />
+		<path name="camcorder-dualmic" />
 	</path>
 
 	<path name="camcorder-headset-mic">
@@ -3687,19 +3687,19 @@
 	</path>
 
 	<!-- camcorder input volume -->
-	<path name="gain-camcorder-mic">
-		<path name="gain-media-mic"/>
-	</path>
-
-	<path name="gain-camcorder-2nd-mic">
-		<path name="gain-media-2nd-mic"/>
-	</path>
-
 	<path name="gain-camcorder-dualmic">
 		<ctl name="IN1R Volume" value="16" />
 		<ctl name="IN1L Volume" value="16" />
 		<ctl name="IN1R Digital Volume" value="123" />
 		<ctl name="IN1L Digital Volume" value="123" />
+	</path>
+
+	<path name="gain-camcorder-mic">
+		<path name="gain-camcorder-dualmic"/>
+	</path>
+
+	<path name="gain-camcorder-2nd-mic">
+		<path name="gain-camcorder-dualmic"/>
 	</path>
 
 	<path name="gain-camcorder-headset-mic">
@@ -3714,23 +3714,23 @@
 	</path>
 
 	<path name="gain-camcorder-headphone-mic">
-		<path name="gain-media-mic"/>
+		<path name="gain-camcorder-mic"/>
 	</path>
 
 	<!-- voice recording input volume -->
-	<path name="gain-recording-mic">
-		<path name="gain-media-mic"/>
-	</path>
-
-	<path name="gain-recording-2nd-mic">
-		<path name="gain-media-2nd-mic"/>
-	</path>
-
 	<path name="gain-recording-dualmic">
 		<ctl name="IN1R Volume" value="16" />
 		<ctl name="IN1L Volume" value="16" />
 		<ctl name="IN1R Digital Volume" value="122" />
 		<ctl name="IN1L Digital Volume" value="122" />
+	</path>
+
+	<path name="gain-recording-mic">
+		<path name="gain-recording-dualmic"/>
+	</path>
+
+	<path name="gain-recording-2nd-mic">
+		<path name="gain-recording-dualmic"/>
 	</path>
 
 	<path name="gain-recording-headset-mic">
@@ -3743,7 +3743,7 @@
 	</path>
 
 	<path name="gain-recording-headphone-mic">
-		<path name="gain-media-mic"/>
+		<path name="gain-recording-mic"/>
 	</path>
 
 	<path name="gain-recording-bt-sco-headset-in">
